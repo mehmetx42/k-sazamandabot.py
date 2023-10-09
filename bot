@@ -1,0 +1,19 @@
+import discord
+import os
+import random
+from discord.ext import commands
+import requests
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.command()
+async def cop(ctx, sayi:int):
+    cp=0
+    cp=sayi+cp
+    await ctx.send(f"Bu gün {sayi} çöp toparladın?")
+    await ctx.send(f"Bu gün ki çöp puanın şöyle: {cp}")
+    await ctx.send("Çevre için daha da gayret etmelisin! Bunun karşılığını illa ki ileride alırsın!")
+    await ctx.send(f"'{ctx.author}' kişisi tarafından istendi")
